@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative border-t border-gray-200 bg-white/70 py-16 backdrop-blur">
+    <footer className="relative border-t border-gray-200 bg-white/70 py-16 backdrop-blur">
       <div className="container mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -39,9 +40,9 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gray-200 pt-6 text-sm text-gray-600 md:flex-row">
           <p>© {new Date().getFullYear()} ServOn Digital. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#services" className="hover:text-gray-900">Services</a>
-            <a href="#work" className="hover:text-gray-900">Work</a>
-            <a href="#contact" className="hover:text-gray-900">Contact</a>
+            <Link to="/services" className="hover:text-gray-900">Services</Link>
+            <Link to="/portfolio" className="hover:text-gray-900">Portfolio</Link>
+            <Link to="/contact" className="hover:text-gray-900">Contact</Link>
           </div>
         </div>
       </div>

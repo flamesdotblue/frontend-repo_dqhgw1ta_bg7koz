@@ -1,31 +1,13 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Rocket, Sparkles } from 'lucide-react';
+import { Rocket, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden" id="home">
-      {/* Top navigation */}
-      <div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-md bg-gradient-to-br from-sky-500 to-indigo-600" />
-          <span className="text-lg font-semibold tracking-tight">ServOn Digital</span>
-        </div>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-700 md:flex">
-          <a className="hover:text-gray-900" href="#services">Services</a>
-          <a className="hover:text-gray-900" href="#work">Work</a>
-          <a className="hover:text-gray-900" href="#contact">Contact</a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-4 py-2 text-white shadow-sm transition hover:bg-gray-800"
-          >
-            Start a project <ArrowRight size={16} />
-          </a>
-        </nav>
-      </div>
-
       {/* Hero content */}
-      <div className="container mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pb-20 pt-6 md:grid-cols-2 md:pb-28 md:pt-10">
+      <div className="container mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pb-20 pt-10 md:grid-cols-2 md:pb-28">
         <div className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,18 +43,18 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-3 text-white shadow-lg shadow-gray-900/10 transition hover:-translate-y-0.5 hover:bg-gray-800"
             >
               Explore services <Rocket size={18} />
-            </a>
-            <a
-              href="#work"
+            </Link>
+            <Link
+              to="/portfolio"
               className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-5 py-3 text-gray-900 transition hover:-translate-y-0.5 hover:border-gray-400"
             >
               View portfolio
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -84,7 +66,7 @@ export default function Hero() {
           className="relative h-[460px] w-full rounded-2xl border border-gray-200 bg-white/70 shadow-xl backdrop-blur md:h-[560px]"
         >
           <Spline
-            scene="https://prod.spline.design/VyGeZv58yuk8j7Yy/scene.splinecode"
+            scene="https://prod.spline.design/UngO8SNLfLcyPG7O/scene.splinecode"
             style={{ width: '100%', height: '100%' }}
           />
           {/* Gentle gradient overlay to add depth without blocking interaction */}
